@@ -34,12 +34,36 @@ def order(a):
 
 
 x=[3,1,2]
-print(order(x))
+#print(order(x))
 
 
 def circnot(a):
     """This function is to denote a given permutation as circular notation"""
-    sample =[]
+    length=0
+    z = [1]
+    circle=True
+    i=0
+    while circle:
+        if a[i] not in z:
+            z.append(a[i])
+            i=a[i]-1
+        else :
+            circle=False
+            newlength = len(z)
+            #print("(%s)"%(z[length:newlength]))
+            print(tuple(z[length:newlength]))
+            length = len(z)
+
+            for idx,item in enumerate(a):
+                if item not in z:
+                    circle = True
+                    i = idx
+                    break
+
+
+
+circnot([4,7,2,5,8,1,3,9,6])
+
     
 
 

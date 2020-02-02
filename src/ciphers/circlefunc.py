@@ -38,7 +38,9 @@ x=[3,1,2]
 
 
 def circnot(a):
-    """This function is to denote a given permutation as circular notation"""
+    """This function is to denote a given permutation as circular notation
+     Takes the input permuatation as an array and returns the circular notation as list of tuples"""
+    circnot= []
     length=0
     z = [1]
     circle=True
@@ -51,7 +53,9 @@ def circnot(a):
             circle=False
             newlength = len(z)
             #print("(%s)"%(z[length:newlength]))
+            circnot.append(tuple(z[length:newlength]))
             print(tuple(z[length:newlength]))
+
             length = len(z)
 
             for idx,item in enumerate(a):
@@ -60,9 +64,9 @@ def circnot(a):
                     i = idx
                     break
 
+    return circnot
 
-
-circnot([4,7,2,5,8,1,3,9,6])
+print(circnot([4,7,2,5,8,1,3,9,6]))
 
     
 

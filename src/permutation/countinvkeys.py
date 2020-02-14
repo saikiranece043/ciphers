@@ -14,7 +14,9 @@ def countinvkeys(size):
         sum = sum + count(size,i)
     return sum
 
-
+totalkeys = math.factorial(26)
+invkeys = countinvkeys(26)
+print(invkeys)
 
 for i in [2,3,4,5,6]:
     totalkeys = math.factorial(i)

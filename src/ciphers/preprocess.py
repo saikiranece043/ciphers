@@ -1,5 +1,5 @@
 import re
-import os
+
 
 def preprocess(file):
     """This function is to read text from a file and return a plain string that contains only lower a-z characters"""
@@ -12,6 +12,14 @@ def preprocess(file):
     return finalstr
 
 
-print(preprocess(os.getcwd()+'/sample'))
+def readfile(file):
+    with open(file, mode='r') as f:
+        text = ''
+        for line in f:
+            text = text + line
+
+    return text
+
+#print(preprocess(os.getcwd()+'/sample'))
 
 

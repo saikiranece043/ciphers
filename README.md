@@ -21,3 +21,10 @@ Encrypt and Decrypt functions would return encrypted text and decrypted text res
 # Vigenere Cipher
 This is also another special case of subsitution cipher. Decrypt and Encrypt functions would take a string as key and a text
 Encrypt and Decrypt functions would return encrypted text and decrypted text respectively
+
+
+# Permutation Cipher
+This is a subset of substitution cipher method where we would encrypt using a permutation p(array) and a value m indicating the length of the key i.e array p. Encrypt and Decrypt functions are implemented. Inverse of the permutation is calculated which is used for decryption.
+
+# Involutory keys
+The number of involutory keys for affine cipher and permutation cipher are calculated for any given size i.e m value for affine and any permuatation for permutation cipher. A key is called involutory key if the encryption key is the same as decryption key. These calls fall under the same mathemtical group, quite useful during cryptanalysis, studying of the strenght of the various crypto systems implemented so far.
